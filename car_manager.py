@@ -11,6 +11,7 @@ class CarManager(Turtle):
         super().__init__()
         self.x_move = - MOVE_INCREMENT
         self.y_move = 0
+        self.far_apart = 5000
         self.car_reset()
 
     def move(self):
@@ -23,5 +24,6 @@ class CarManager(Turtle):
         self.speed("slowest")
         self.color(random.choice(COLORS))
         self.shape("square")
-        self.goto((random.randint(-300, 15000), (random.randint(-250, 300))))
+        self.far_apart += 1000
+        self.goto((random.randint(-300, self.far_apart), (random.randint(-250, 300))))
         self.shapesize(stretch_wid=1, stretch_len=2)

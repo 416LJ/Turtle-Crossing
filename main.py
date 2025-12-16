@@ -18,8 +18,8 @@ screen.onkey(player.up, "Up")
 speed = 0.1
 
 car_list = []
-
-for i in range(random.randint(1, 1000)):
+num_of_cars = 200
+for i in range(random.randint(1, num_of_cars)):
     car_list.append(CarManager())
 
 game_is_on = True
@@ -29,12 +29,13 @@ while game_is_on:
 
     for car in car_list:
         car.move()
-        if player.distance(car) < 20:
+        if player.distance(car) < 30:
             game_is_on = False
             score.game_over()
 
     if player.check_finish():
         score.update_score()
+        num_of_cars += 200
         for car in car_list:
             car.car_reset()
         player.reset_turtle()
