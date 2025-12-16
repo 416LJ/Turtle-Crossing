@@ -5,11 +5,10 @@ from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
 
-
-
 screen = Screen()
 screen.title("Turtle Crossing")
-screen.setup(width=600, height=600)
+screen.setup(width=600, height=700)
+screen.bgcolor("black")
 screen.tracer(0)
 screen.listen()
 score = Scoreboard()
@@ -20,7 +19,7 @@ speed = 0.1
 
 car_list = []
 
-for i in range(random.randint(1,1000)):
+for i in range(random.randint(1, 1000)):
     car_list.append(CarManager())
 
 game_is_on = True
@@ -42,5 +41,3 @@ while game_is_on:
         speed *= 0.9
 
 screen.exitonclick()
-
-
