@@ -3,7 +3,8 @@ from turtle import Turtle
 STARTING_POSITION = (0, -300)
 MOVE_DISTANCE = 10
 FINISH_LINE_Y = 300
-
+MOVE_L = 15
+MOVE_R = 15
 
 class Player(Turtle):
     def __init__(self):
@@ -19,10 +20,10 @@ class Player(Turtle):
         self.forward(MOVE_DISTANCE)
 
     def mov_left(self):
-        self.goto(self.xcor() - MOVE_DISTANCE,self.ycor())
+        self.goto(self.xcor() - MOVE_L,self.ycor())
 
     def mov_right(self):
-        self.goto(self.xcor() + MOVE_DISTANCE,self.ycor())
+        self.goto(self.xcor() + MOVE_R,self.ycor())
 
     def check_finish(self):
         if self.ycor() > FINISH_LINE_Y:

@@ -40,6 +40,6 @@ while game_is_on:
         for car in car_list:
             car.car_reset()
         player.reset_turtle()
-        speed *= 1.1
+        speed *= 1.025
 
 screen.exitonclick()

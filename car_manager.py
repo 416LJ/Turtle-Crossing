@@ -24,6 +24,6 @@ class CarManager(Turtle):
         self.speed("slowest")
         self.color(random.choice(COLORS))
         self.shape("square")
-        self.far_apart += 500
+        self.far_apart += 1000
         self.goto((random.randint(290, self.far_apart), (random.randint(-250, 300))))
         self.shapesize(stretch_wid=1, stretch_len=2)
