@@ -25,7 +25,7 @@ class Player(Turtle):
         self.goto(self.xcor() + MOVE_DISTANCE,self.ycor())
 
     def check_finish(self):
-        if self.ycor() == FINISH_LINE_Y:
+        if self.ycor() > FINISH_LINE_Y:
             return True
 
     def reset_turtle(self):
