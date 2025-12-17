@@ -11,7 +11,7 @@ class CarManager(Turtle):
         super().__init__()
         self.x_move = - MOVE_INCREMENT
         self.y_move = 0
-        self.far_apart = 5000
+        self.far_apart = 2500
         self.car_reset()
 
     def move(self):

@@ -14,6 +14,8 @@ screen.listen()
 score = Scoreboard()
 player = Player()
 screen.onkey(player.up, "Up")
+screen.onkey(player.mov_left, "Left")
+screen.onkey(player.mov_right, "Right")
 speed = 0.1
 car_list = []
 num_of_cars = 5

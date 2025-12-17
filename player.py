@@ -18,6 +18,12 @@ class Player(Turtle):
     def up(self):
         self.forward(MOVE_DISTANCE)
 
+    def mov_left(self):
+        self.goto(self.xcor() - MOVE_DISTANCE,self.ycor())
+
+    def mov_right(self):
+        self.goto(self.xcor() + MOVE_DISTANCE,self.ycor())
+
     def check_finish(self):
         if self.ycor() == FINISH_LINE_Y:
             return True
